@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Button from "./Button";
-
+import axios from "axios";
 const API_KEY = "DEMO_KEY";
 class App extends Component {
     neoBrowseData = {};
 
     componentDidMount() {
         // Now that this component mounted, grab the browse data
-        fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse/?api_key=${API_KEY}`)
-            .then(data => {
-                console.log(data);
+        axios(`https://api.nasa.gov/neo/rest/v1/neo/browse/?api_key=${API_KEY}`)
+            .then(response => {
+                console.log(response);
                 // Set the state so we can use this data later
-                this.setState({ neoBrowseData: data });
+                this.setState({ neoBrowseData: response.body });
             })
             .catch(err => {
                 console.log(`Some error happened`, err);
