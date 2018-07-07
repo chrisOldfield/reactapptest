@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Button from "./Button";
+import Button from "./Button/Button";
 import axios from "axios";
 import v4 from "uuid/v4";
 
