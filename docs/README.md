@@ -10,7 +10,7 @@ Inside the website directory, run `npm install`
 
 ## Development server
 
-To run development server
+To run development server open a new terminal and run
 
 ```bash
 

@@ -1,13 +1,17 @@
 ---
-title: New Version 1.0.0
-author: Eric Nakagawa
-authorURL: http://twitter.com/ericnakagawa
-authorFBID: 661277173
+title: Information on Future App Setup
+author: Matthew Oldfield
+authorURL: http://asmattic.com
+authorFBID: 
 ---
 
 ## Documentation Search
 
 Implementing the search in this site sign up for the free version of [Algolia Docusearch](https://community.algolia.com/docsearch/) and then follow the instructions on the [Docusaurus site search setup page](https://docusaurus.io/docs/en/search) to finish the setup.
+
+[comment]: <> (The truncate comment below is used when in a list of blog posts where there will be a read more link)
+
+<!--truncate-->
 
 ## Jest Testing
 
