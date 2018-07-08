@@ -1,9 +1,10 @@
 ---
-title: Information on Future App Setup
-author: Matthew Oldfield
-authorURL: http://asmattic.com
-authorFBID: 
+id: feature-ideas
+title: feature-ideas
+sidebar_label: Feature Ideas
 ---
+
+# Feature Ideas
 
 ## Documentation Search
 
@@ -24,3 +25,7 @@ Here are a few articles and examples of using [Jest for React testing](https://j
  - [VSCode with Jest](https://github.com/jest-community/vscode-jest)
  - [Take a React component tree, and render it into an SVG](https://github.com/jest-community/jest-snapshots-svg)
  - [Jest Community Github with multiple good projects such as the two above](https://github.com/jest-community)
+
+ ## Making development smoother
+
+  - Use [concurrently](https://www.npmjs.com/package/concurrently) to make running the multiple development servers easier.
