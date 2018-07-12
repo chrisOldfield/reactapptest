@@ -4,6 +4,7 @@ import "./App.css";
 import Button from "./Button/Button";
 import axios from "axios";
 import v4 from "uuid/v4";
+import CustomReactTable from "./Table/Table";
 
 const API_KEY = "DEMO_KEY";
 class App extends Component {
@@ -45,6 +46,7 @@ class App extends Component {
                     To get started, edit <code>src/App.js</code> and save to
                     reload.
                 </p>
+                <CustomReactTable />
             </div>
         );
     }
