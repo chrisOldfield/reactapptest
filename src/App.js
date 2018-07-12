@@ -30,23 +30,24 @@ class App extends Component {
             });
     }
     render() {
+        const { near_earth_objects } = this.state.neoBrowseData;
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
-                <Button />
-                <ul>
-                    {this.state.neoBrowseData.near_earth_objects.map(neo => (
+                {/*<Button />*/}
+                {/*<ul>
+                    {near_earth_objects.map(neo => (
                         <li key={v4()}>Name: {neo.name}</li>
                     ))}
-                </ul>
+                </ul>*/}
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to
                     reload.
                 </p>
-                <CustomReactTable />
+                <CustomReactTable neo={near_earth_objects} />
             </div>
         );
     }
