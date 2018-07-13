@@ -1,21 +1,18 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Button from "./Button/Button";
-import axios from "axios";
-import v4 from "uuid/v4";
+// import Button from "./Button/Button";
+// import axios from "axios";
+// import v4 from "uuid/v4";
 import CustomReactTable from "./Table/Table";
 
 const API_KEY = "DEMO_KEY";
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            neoBrowseData: {
-                near_earth_objects: [{ name: "" }]
-            }
-        };
-    }
+    state = {
+        neoBrowseData: {
+            near_earth_objects: [{ name: "" }]
+        }
+    };
 
     componentDidMount() {
         // Now that this component mounted, grab the browse data
@@ -51,10 +48,6 @@ class App extends Component {
                         <li key={v4()}>Name: {neo.name}</li>
                     ))}
                 </ul>*/}
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to
-                    reload.
-                </p>
                 <CustomReactTable neo={near_earth_objects} />
             </div>
         );
