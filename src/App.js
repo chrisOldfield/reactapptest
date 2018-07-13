@@ -19,14 +19,22 @@ class App extends Component {
 
     componentDidMount() {
         // Now that this component mounted, grab the browse data
-        axios(`https://api.nasa.gov/neo/rest/v1/neo/browse/?api_key=${API_KEY}`)
+        fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse/?api_key=${API_KEY}`)
             .then(response => {
-                console.log(response.data);
+                if (response.status >= 200 && response.status < 300) {
+                    return Promise.resolve(response);
+                } else {
+                    return Promise.reject(new Error(response.statusText));
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Response from fetch ", data);
                 // Set the state so we can use this data later
-                this.setState({ neoBrowseData: response.data });
+                this.setState({ neoBrowseData: data });
             })
             .catch(err => {
-                console.log(`Some error happened`, err);
+                console.log(`There was an error in fetch `, err);
             });
     }
     render() {
